@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DeckOfCardsWebApp.Models.CardAPI>
+
+@{
+    ViewData["Title"] = "Draw5";
+}
+
+<h1>Draw 5 Cards</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               
+               @item.value
+               @item.suit
+               <br>
+               <img src="@item.image" />
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
